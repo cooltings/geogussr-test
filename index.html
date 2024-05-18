@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Street View split-map-panes</title>
+
+    <style>
+        html,
+        body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        }
+
+        #streetview {
+        height: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="streetview"></div>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initialize&v=weekly"
+    defer
+  ></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
