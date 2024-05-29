@@ -1,27 +1,80 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Street View split-map-panes</title>
-
     <style>
-        html,
-        body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         #streetview {
-        height: 100%;
+            height: 100%;
+        }
+        .gm-iv-address{
+            visibility: hidden !important;
+        }
+        .gm-control-active, .gmnoprint, .gm-style-cc{
+            visibility: hidden !important;
+        }
+        #guessMap{
+            height: 800px;
+            width: 1500px;
+        }
+        #mapcontainer{
+            position: fixed;
+            height: 340px;
+            width: 600px;
+            bottom: 20px !important;
+            right: 20px !important;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            transition: all 0.3s;
+            border-radius: 20px;
+            z-index: 2;
+            background-color: lightblue;
+
+        }
+        .submit {
+            margin-top: 48%;
+            margin-left: 35%;
+            z-index: 3;
+            position: absolute;
+            width: 30%;
+            height: 45px;
+            border-radius: 9px;
+            border: 0;
+            background-color: dodgerblue;
+            opacity: 0.95;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        #mapcontainer:hover{
+            height: 800px;
+            width: 1500px;
+            bottom: 20px;
+            right: 20px;
+        }
+        #streetview{
+            z-index: 1;
+        }
+        #nextround{
+            margin-top: 2%;
+            visibility: hidden;
         }
     </style>
-    
 </head>
 <body>
+    <div id="mapcontainer">
+        <button onclick='submit()' class="submit" id="submit">Submit</button>
+        <button onclick='nextround()' id="nextround" class="submit">Next Round</button>
+        <div id="guessMap" ></div>
+        
+    </div>
     <div id="streetview"></div>
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initialize&v=weekly"
-    defer
-  ></script>
-    <script type="module" src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCipnnoHYnjrWH5qGH2jqmM-NFpjA4WfNI&callback=initialize&v=weekly" defer></script>
+    <script src="OpenLayers.js"></script>
+    <script src="app.js" ></script>
 </body>
 </html>
