@@ -12,7 +12,7 @@ function add () {
 //listen for keypress
 document.getElementById("todoinput").addEventListener("keydown", (event) =>{
     //don't allow submit on blank textbox
-    if (document.getElementById("todoinput").value == "") {
+    if (document.getElementById("todoinput").value == "" && event.code == "Enter") {
         event.preventDefault()
     //add item on enter
     } else if (event.code == "Enter") {
