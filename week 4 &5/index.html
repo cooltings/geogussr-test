@@ -1,0 +1,72 @@
+<header>
+    <style>
+        .title{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            width: 100%;
+        }
+        .body{
+            display: flex;
+            flex-direction: column;
+            transition: all 1s;
+        }
+        #todoinput{
+            width: 90%;
+            height: 50px;
+            border-radius: 30px;
+            border: solid;
+            resize: none;
+            padding: 7px;
+            font-size: larger;
+
+        }
+        #textadd{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+        button{
+            background-color: aqua;
+            width: 100px;
+            border: solid;
+            border-radius: 30px;
+            font-size: larger;
+        
+        }
+        .itemcont{
+            display: flex;
+            direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            
+            margin-top: 10px;
+            background-color: gainsboro;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .itemcont>p{
+            width:70%;
+        }
+        .itemcont>button{
+            border-radius: 5px;
+            background-color: red;
+        }
+        #it{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+</header>
+
+<body id="cont">
+    <h1 class="title">To Do List</h1>
+    <div id="textadd">
+        <textarea name="Input To-Do item" id="todoinput" cols="50" rows="1"></textarea>
+        <button onclick=add()>Add</button>
+    </div>
+    <script src="app.js">
+
+    </script>
+    <div id="it">
+
+    </div>
+</body>
